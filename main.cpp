@@ -196,53 +196,53 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1)
+Thing 1) Train
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of train cars
+    2) number of seats
+    3) the amount of electrcity used
+    4) number of miles traveled per day
+    5) ticket price
 3 things it can do:
-    1)
-    2)
-    3)
+    1) take customer to destination
+    2) check ticket
+    3) pickup customer at station
 
-Thing 2)
+Thing 2) Restaurant
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of food items
+    2) number of plates
+    3) number of chairs
+    4) number of tables
+    5) operating hours
 3 things it can do:
-    1)
-    2)
-    3)
+    1) feed customer
+    2) serve customer
+    3) reserve seats for customer
 
-Thing 3)
+Thing 3) Airport
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of planes
+    2) size of tarmac
+    3) number of gates
+    4) length of security line
+    5) number of private jets
 3 things it can do:
-    1)
-    2)
-    3)
+    1) board customer on a plane
+    2) move luggage
+    3) delay flight
 
-Thing 4)
+Thing 4) Gym
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of staff
+    2) number of weights
+    3) number of lockers
+    4) amount of staff
+    5) number of benches
 3 things it can do:
-    1)
-    2)
-    3)
+    1) make customer loose weight
+    2) make customer build muscles
+    3) run exercis classes
 */
 
 /*
