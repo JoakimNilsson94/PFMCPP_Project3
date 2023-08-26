@@ -198,11 +198,11 @@ Part 1b - Step 2: Assignment
 
 Thing 1) Train
 5 properties:
-    1) number of train cars
-    2) number of seats
-    3) the amount of electrcity used
-    4) number of miles traveled per day
-    5) ticket price
+    1) number of train cars (int)
+    2) number of seats (int)
+    3) the amount of electrcity used (float)
+    4) number of miles traveled per day (double)
+    5) ticket price (double)
 3 things it can do:
     1) take customer to destination
     2) check ticket
@@ -210,11 +210,11 @@ Thing 1) Train
 
 Thing 2) Restaurant
 5 properties:
-    1) number of food items
-    2) number of plates
-    3) number of chairs
-    4) number of tables
-    5) operating hours
+    1) number of food items (int)
+    2) number of plates (int)
+    3) number of chairs (int)
+    4) number of tables (int)
+    5) operating hours (double)
 3 things it can do:
     1) feed customer
     2) serve customer
@@ -222,11 +222,11 @@ Thing 2) Restaurant
 
 Thing 3) Airport
 5 properties:
-    1) number of planes
-    2) size of tarmac
-    3) number of gates
-    4) length of security line
-    5) number of private jets
+    1) number of planes (int)
+    2) size of tarmac (int)
+    3) number of gates (int)
+    4) length of security line (int)
+    5) number of private jets (int)
 3 things it can do:
     1) board customer on a plane
     2) move luggage
@@ -234,11 +234,11 @@ Thing 3) Airport
 
 Thing 4) Gym
 5 properties:
-    1) number of staff
-    2) number of weights
-    3) number of lockers
-    4) amount of staff
-    5) number of benches
+    1) number of staff (int)
+    2) number of weights (int)
+    3) number of lockers (int)
+    4) amount of staff (int)
+    5) type of equipment (std::string)
 3 things it can do:
     1) make customer loose weight
     2) make customer build muscles
