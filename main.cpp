@@ -436,11 +436,11 @@ example:
 
 Thing 5) Inner Pot
 5 properties:
-    1) height in cm
-    2) width in cm
-    3) circumference in cm
-    4) thickness in cm
-    5) volume in liters
+    1) height in cm (int)
+    2) width in cm (int)
+    3) circumference in cm (int)
+    4) thickness in cm (int)
+    5) volume in liters (int)
 3 things it can do:
     1) be taken out of outer pot
     2) hold food
@@ -448,11 +448,11 @@ Thing 5) Inner Pot
 
 Thing 6) Outer Pot
 5 properties:
-    1) volume of condensation collector in ml
-    2) amount of heat produced in celsius
-    3) amount of power consumed
-    4) number of handles
-    5) number of feet
+    1) volume of condensation collector in ml (float)
+    2) amount of heat produced in celsius (double)
+    3) amount of power consumed (float)
+    4) number of handles (int)
+    5) number of feet (int)
 3 things it can do:
     1) keep heat in
     2) get rid of excess condesation
@@ -460,11 +460,11 @@ Thing 6) Outer Pot
 
 Thing 7) Control Panel
 5 properties:
-    1) number of buttons
-    2) display pixels
-    3) brightness of display
-    4) amount of lights
-    5) amount of settings
+    1) number of buttons (int)
+    2) number of display pixels (int)
+    3) brightness of display (double)
+    4) number of lights (int)
+    5) amount of settings (int)
 3 things it can do:
     1) set temperture
     2) start a cooking program
@@ -472,11 +472,11 @@ Thing 7) Control Panel
 
 Thing 8) Lid
 5 properties:
-    1) circumference in cm
-    2) thickness of sealing ring in mm
-    3) number of lid fins
-    4) height of lid handle in cm
-    5) number of holes in exhaust valve
+    1) circumference in cm (int)
+    2) thickness of sealing ring in mm (float)
+    3) number of lid fins (int)
+    4) height of lid handle in cm (int)
+    5) number of holes in exhaust valve (int)
 3 things it can do:
     1) seal Instant Pot
     2) release steam
@@ -484,11 +484,11 @@ Thing 8) Lid
 
 Thing 9) Trivet
 5 properties:
-    1) height of feet in mm
-    2) lenght of arms in cm
-    3) lenght between grills cm
-    4) number of grills longitudinal
-    5) number of grills lateral
+    1) height of feet in mm (double)
+    2) lenght of arms in cm (int)
+    3) lenght between grills cm (double)
+    4) number of grills longitudinal (int)
+    5) number of grills lateral (int)
 3 things it can do:
     1) hold external steaming rack
     2) lift food out
