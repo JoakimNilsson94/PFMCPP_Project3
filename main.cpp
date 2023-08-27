@@ -434,65 +434,65 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
-Thing 5)
+Thing 5) Inner Pot
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) height in cm
+    2) width in cm
+    3) circumference in cm
+    4) thickness in cm
+    5) volume in liters
 3 things it can do:
-    1)
-    2)
-    3)
+    1) be taken out of outer pot
+    2) hold food
+    3) show max volume of food able to be cooked at once
 
-Thing 6)
+Thing 6) Outer Pot
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) volume of condensation collector in ml
+    2) amount of heat produced in celsius
+    3) amount of power consumed
+    4) number of handles
+    5) number of feet
 3 things it can do:
-    1)
-    2)
-    3)
+    1) keep heat in
+    2) get rid of excess condesation
+    3) create and hold pressure
 
-Thing 7)
+Thing 7) Control Panel
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) number of buttons
+    2) display pixels
+    3) brightness of display
+    4) amount of lights
+    5) amount of settings
 3 things it can do:
-    1)
-    2)
-    3)
+    1) set temperture
+    2) start a cooking program
+    3) show cooking time
 
-Thing 8)
+Thing 8) Lid
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) circumference in cm
+    2) thickness of sealing ring in mm
+    3) number of lid fins
+    4) height of lid handle in cm
+    5) number of holes in exhaust valve
 3 things it can do:
-    1)
-    2)
-    3)
+    1) seal Instant Pot
+    2) release steam
+    3) twist on and off Instant Pot
 
-Thing 9)
+Thing 9) Trivet
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) height of feet in mm
+    2) lenght of arms in cm
+    3) lenght between grills cm
+    4) number of grills longitudinal
+    5) number of grills lateral
 3 things it can do:
-    1)
-    2)
-    3)
+    1) hold external steaming rack
+    2) lift food out
+    3) fold together
  */
 
 /*
