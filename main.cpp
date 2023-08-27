@@ -337,17 +337,17 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10)
+Thing 10) Instant Pot
 5 properties:
-    1)
-    2)
-    3)
-    4)
-    5)
+    1) Inner Pot
+    2) Outer Pot
+    3) Control Panel
+    4) Lid
+    5) Trivet
 3 things it can do:
-    1)
-    2)
-    3)
+    1) make yoghurt
+    2) slow cook food
+    3) pressure cook food
  */
 
  /*
