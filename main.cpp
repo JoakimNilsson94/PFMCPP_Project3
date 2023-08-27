@@ -196,53 +196,7 @@ Part 1b - Step 2: Assignment
         c) pick properties that can eventually be represented with 
         'int float double bool char std::string'.
 
-Thing 1) Train
-5 properties:
-    1) number of train cars (int)
-    2) number of seats (int)
-    3) the amount of electrcity used (float)
-    4) number of miles traveled per day (double)
-    5) ticket price (double)
-3 things it can do:
-    1) take customer to destination
-    2) check ticket
-    3) pickup customer at station
 
-Thing 2) Restaurant
-5 properties:
-    1) number of food items (int)
-    2) number of plates (int)
-    3) number of chairs (int)
-    4) number of tables (int)
-    5) operating hours (double)
-3 things it can do:
-    1) feed customer
-    2) serve customer
-    3) reserve seats for customer
-
-Thing 3) Airport
-5 properties:
-    1) number of planes (int)
-    2) size of tarmac (int)
-    3) number of gates (int)
-    4) length of security line (int)
-    5) number of private jets (int)
-3 things it can do:
-    1) board customer on a plane
-    2) move luggage
-    3) delay flight
-
-Thing 4) Gym
-5 properties:
-    1) number of staff (int)
-    2) number of weights (int)
-    3) number of lockers (int)
-    4) amount of staff (int)
-    5) type of equipment (std::string)
-3 things it can do:
-    1) make customer loose weight
-    2) make customer build muscles
-    3) run exercis classes
 */
 
 /*
@@ -337,17 +291,7 @@ Define an object that is made of 5 sub-objects.
     These 5 sub-objects will not be defined using Primitives, but instead will be their own UDTs 
     you'll define these 5 sub-objects in Part 1d.
 
-Thing 10) Instant Pot
-5 properties:
-    1) Inner Pot
-    2) Outer Pot
-    3) Control Panel
-    4) Lid
-    5) Trivet
-3 things it can do:
-    1) make yoghurt
-    2) slow cook food
-    3) pressure cook food
+
  */
 
  /*
@@ -434,6 +378,106 @@ example:
     You will need to provide 5 properties and 3 member functions of that Engine object in plain English.
     Remember to pick properties that can be represented with 'int float double bool char std::string'.
 
+
+ */
+
+/*
+=================
+Part 1d - Step 3: Commit
+=================
+Now that you've made changes to the code, make a commit!
+Be sure to make the commit message meaningful.
+*/
+
+/*
+================
+Part 1d - Step 4: Assignment
+================
+    - write the name of the primitive type you'll be using after each property for UDTs 5 - 9.
+    - You already did this for UDTs 1-4 in Part 1c.
+    - Pick properties that can be represented with 'int float double bool char std::string'
+    
+example: 
+    Display:
+        Number of Pixels (int)
+        Amount of Power consumed (milliwatt-hours) (float)
+        Brightness (double)
+        width in cm (int)
+        height in cm (int)
+*/
+
+/*
+=================
+Part 1d - Step 5: Commit
+=================
+Now that you've made changes to the code, make a commit!
+Be sure to make the commit message meaningful.
+*/
+
+/*
+===================
+Part 1d - Step 6: assignment
+===================
+You've just defined 10 UDTs!
+4 of them are unrelated (UDTs 1-4).
+5 of them form the sub-objects that make up the 10th UDT. 
+
+MOVE THEM to the space below this block comment and put them in numerical order 
+(1 - 10).
+    DO NOT COPY. 
+    CUT AND PASTE. 
+    I do not want to see 2 copies of your Plain-English UDTs.  
+    I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
+    simply CUT and PASTE them in the space provided below:
+*/
+Thing 1) Train
+5 properties:
+    1) number of train cars (int)
+    2) number of seats (int)
+    3) the amount of electrcity used (float)
+    4) number of miles traveled per day (double)
+    5) ticket price (double)
+3 things it can do:
+    1) take customer to destination
+    2) check ticket
+    3) pickup customer at station
+
+Thing 2) Restaurant
+5 properties:
+    1) number of food items (int)
+    2) number of plates (int)
+    3) number of chairs (int)
+    4) number of tables (int)
+    5) operating hours (double)
+3 things it can do:
+    1) feed customer
+    2) serve customer
+    3) reserve seats for customer
+
+Thing 3) Airport
+5 properties:
+    1) number of planes (int)
+    2) size of tarmac (int)
+    3) number of gates (int)
+    4) length of security line (int)
+    5) number of private jets (int)
+3 things it can do:
+    1) board customer on a plane
+    2) move luggage
+    3) delay flight
+
+Thing 4) Gym
+5 properties:
+    1) number of staff (int)
+    2) number of weights (int)
+    3) number of lockers (int)
+    4) amount of staff (int)
+    5) type of equipment (std::string)
+3 things it can do:
+    1) make customer loose weight
+    2) make customer build muscles
+    3) run exercis classes
+
 Thing 5) Inner Pot
 5 properties:
     1) height in cm (int)
@@ -493,61 +537,18 @@ Thing 9) Trivet
     1) hold external steaming rack
     2) lift food out
     3) fold together
- */
 
-/*
-=================
-Part 1d - Step 3: Commit
-=================
-Now that you've made changes to the code, make a commit!
-Be sure to make the commit message meaningful.
-*/
-
-/*
-================
-Part 1d - Step 4: Assignment
-================
-    - write the name of the primitive type you'll be using after each property for UDTs 5 - 9.
-    - You already did this for UDTs 1-4 in Part 1c.
-    - Pick properties that can be represented with 'int float double bool char std::string'
-    
-example: 
-    Display:
-        Number of Pixels (int)
-        Amount of Power consumed (milliwatt-hours) (float)
-        Brightness (double)
-        width in cm (int)
-        height in cm (int)
-*/
-
-/*
-=================
-Part 1d - Step 5: Commit
-=================
-Now that you've made changes to the code, make a commit!
-Be sure to make the commit message meaningful.
-*/
-
-/*
-===================
-Part 1d - Step 6: assignment
-===================
-You've just defined 10 UDTs!
-4 of them are unrelated (UDTs 1-4).
-5 of them form the sub-objects that make up the 10th UDT. 
-
-MOVE THEM to the space below this block comment and put them in numerical order 
-(1 - 10).
-    DO NOT COPY. 
-    CUT AND PASTE. 
-    I do not want to see 2 copies of your Plain-English UDTs.  
-    I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
-    simply CUT and PASTE them in the space provided below:
-*/
-
-
-
-
+Thing 10) Instant Pot
+5 properties:
+    1) Inner Pot
+    2) Outer Pot
+    3) Control Panel
+    4) Lid
+    5) Trivet
+3 things it can do:
+    1) make yoghurt
+    2) slow cook food
+    3) pressure cook food
 
 
 
