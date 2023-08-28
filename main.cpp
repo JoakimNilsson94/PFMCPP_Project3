@@ -440,7 +440,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
 3 things it can do:
     1) take customer to destination
     2) check ticket
-    3) pickup customer at station
+    3) pickup customers at station
 */
 struct Train
 {
@@ -456,9 +456,12 @@ struct Train
     //ticket price (double)
     double ticketPrice = 12;
     //3 things it can do:
-    //   - take customer to destination
-    //   - check ticket
-    //   - pickup customer at station
+    //take customer to destination
+    void takeCustomerToDestination(bool isCustomerDestination);//returns if the stop is the customer destination or not
+    //check ticket
+    void checkTicket();
+    //pickup customers at station
+    void pickupCustomer(int amountCustomerAtStop); //returns how many customers are getting on
 };
 
 /* 
@@ -488,9 +491,13 @@ struct Restaurant
     //operating hours (double)
     double operatingHours = 9.5;
     //3 things it can do:
-    //   - feed customer
-    //   - serve customer
-    //   - reserve seats for customer
+    //feed customer
+    void feedCustomer();
+    //serve customer
+    void serveCustomer();
+    //reserve seats for customer
+    void reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns how many customers are reserving and if the restaurant is full
+    
 };
 
 /* 
@@ -520,9 +527,12 @@ struct Airport
     //number of private jets (int)
     int numPrivateJets = 2;
     //3 things it can do:
-    //   - board customer on a plane
-    //   - move luggage
-    //   - delay flight
+    //board customer on a plane
+    void boardCustomerOnPlane();
+    //move luggage
+    void moveLuggage();
+    //delay flight
+    void delayFlight(double amountDelayed); //returns how long the delay is
 };
 
 /* 
@@ -552,9 +562,12 @@ struct Gym
     //brand of equipment (std::string)
     std::string brandEquipment = "Technogym";
     //3 things it can do:
-    //   - make customer loose weight
-    //   - make customer build muscles
-    //   - run exercis classes
+    //make customer loose weight
+    void makeCustomerLooseWeight();
+    //make customer build muscles
+    void makeCustomerBuildMuscles();
+    //run exercis classes
+    void runExercisClasses (std::string typeOfClass); //returns what type of class will run
 };
 
 /* 
@@ -584,9 +597,12 @@ struct InnerPot
     //volume in liters (int)
     int volumeLiters = 6;
     //3 things it can do:
-    //   - be taken out of outer pot
-    //   - hold food
-    //   - show max volume of food able to be cooked at once
+    //be taken out of outer pot
+    void TakenOutOfInnerPot();
+    //hold food
+    void holdFood();
+    //show max volume of food able to be cooked at once
+    void showMaxVolumeFoodAbleToBeCookedAtOnce();
 };
 
 /* 
@@ -600,7 +616,7 @@ Thing 6) Outer Pot
 3 things it can do:
     1) keep heat in
     2) get rid of excess condesation
-    3) create and hold pressure
+    3) create pressure
 */
 struct OuterPot
 {
@@ -616,9 +632,12 @@ struct OuterPot
     //number of feet (int)
     int numFeet = 4;
     //3 things it can do:
-    //   - keep heat in
-    //   - get rid of excess condesation
-    //   - create and hold pressure
+    //keep heat in
+    void keepHeat();
+    //get rid of excess condesation
+    void getRidExcessCondensation(bool condensationCollectorFull); //returns if able to get rid of the excess condensation
+    //create pressure
+    void createPressure();
 };
 
 /* 
@@ -648,9 +667,12 @@ struct ControlPanel
     //number of settings (int)
     int numSettings = 23;
     //3 things it can do:
-    //   - set temperture
-    //   - start a cooking program
-    //   - show cooking time
+    //set temperture
+    void setTemperture();
+    //start a cooking program
+    void startCookingProgram();
+    //show cooking time
+    float showCookingTime(float cookingTimePassed); //returns how long is left when you check it
 };
 
 /* 
@@ -664,7 +686,7 @@ Thing 8) Lid
 3 things it can do:
     1) seal Instant Pot
     2) release steam
-    3) twist on and off Instant Pot
+    3) twist on Instant Pot
 */
 struct Lid
 {
@@ -680,9 +702,12 @@ struct Lid
     //number of holes in exhaust valve (int)
     int numholesExhaustValve = 3;
     //3 things it can do:
-    //   - seal Instant Pot
-    //   - release steam
-    //   - twist on and off Instant Pot
+    //seal Instant Pot
+    void sealInstantPot();
+    //release steam
+    void releaseSteam(bool steamValveOpen); //return if it can release steam
+    //twist on Instant Pot
+    void twistOnInstanPot();
 };
 
 /* 
@@ -712,9 +737,12 @@ struct Trivet
     //number of grills lateral (int)
     int numGrillsLateral = 4;
     //3 things it can do:
-    //   - hold external steaming rack
-    //   - lift food out
-    //   - fold together
+    //hold external steaming rack
+    void holdExternalSteamingRack();
+    //lift food out
+    void liftFoodOut();
+    //fold together
+    void foldTogether();
 };
 
 /* 
@@ -739,9 +767,12 @@ struct InstantPot
     //   - Lid
     //   - Trivet
     //3 things it can do:
-    //   - make yoghurt
-    //   - slow cook food
-    //   - pressure cook food
+    //make yoghurt
+    void makeYoghurt();
+    //slow cook food
+    void slowCookFood();
+    //pressure cook food
+    void pressureCookFood();
 };
 
 
