@@ -788,10 +788,15 @@ struct InstantPot
 {
     //5 properties:
     //   - Inner Pot
+    InnerPot innerPot;
     //   - Outer Pot
+    OuterPot outerPot;
     //   - Control Panel
+    ControlPanel controlPanel;
     //   - Lid
+    Lid lid;
     //   - Trivet
+    Trivet trivet;
     //3 things it can do:
     //make yoghurt
     void makeYoghurt(int amountYoghurt);
