@@ -444,7 +444,16 @@ MOVE THEM to the space below this block comment and put them in numerical order
 */
 struct Train
 {
-    
+    //5 properties:
+    //   - number of train cars (int)
+    //   - number of seats (int)
+    //   - the amount of electrcity used (float)
+    //   - number of miles traveled per day (double)
+    //   - ticket price (double)
+    //3 things it can do:
+    //   - take customer to destination
+    //   - check ticket
+    //   - pickup customer at station
 };
 
 /* 
@@ -462,7 +471,16 @@ Thing 2) Restaurant
 */
 struct Restaurant 
 {
-
+    //5 properties:
+    //   - number of food items (int)
+    //   - number of plates (int)
+    //   - number of chairs (int)
+    //   - number of tables (int)
+    //   - operating hours (double)
+    //3 things it can do:
+    //   - feed customer
+    //   - serve customer
+    //   - reserve seats for customer
 };
 
 /* 
@@ -480,7 +498,16 @@ Thing 3) Airport
 */
 struct Airport
 {
-
+    //5 properties:
+    //   - number of planes (int)
+    //   - size of tarmac (int)
+    //   - number of gates (int)
+    //   - length of security line (int)
+    //   - number of private jets (int)
+    //3 things it can do:
+    //   - board customer on a plane
+    //   - move luggage
+    //   - delay flight
 };
 
 /* 
@@ -498,7 +525,16 @@ Thing 4) Gym
 */
 struct Gym 
 {
-
+    //5 properties:
+    //   - number of staff (int)
+    //   - number of weights (int)
+    //   - number of lockers (int)
+    //   - amount of staff (int)
+    //   - type of equipment (std::string)
+    //3 things it can do:
+    //   - make customer loose weight
+    //   - make customer build muscles
+    //   - run exercis classes
 };
 
 /* 
@@ -516,7 +552,16 @@ Thing 5) Inner Pot
 */
 struct InnerPot
 {
-
+    //5 properties:
+    //   - height in cm (int)
+    //   - width in cm (int)
+    //   - circumference in cm (int)
+    //   - thickness in cm (int)
+    //   - volume in liters (int)
+    //3 things it can do:
+    //   - be taken out of outer pot
+    //   - hold food
+    //   - show max volume of food able to be cooked at once
 };
 
 /* 
@@ -534,7 +579,16 @@ Thing 6) Outer Pot
 */
 struct OuterPot
 {
-
+    //5 properties:
+    //   - volume of condensation collector in ml (float)
+    //   - amount of heat produced in celsius (double)
+    //   - amount of power consumed (float)
+    //   - number of handles (int)
+    //   - number of feet (int)
+    //3 things it can do:
+    //   - keep heat in
+    //   - get rid of excess condesation
+    //   - create and hold pressure
 };
 
 /* 
@@ -552,7 +606,16 @@ Thing 7) Control Panel
 */
 struct ControlPanel
 {
-
+    //5 properties:
+    //   - number of buttons (int)
+    //   - number of display pixels (int)
+    //   - brightness of display (double)
+    //   - number of lights (int)
+    //   - amount of settings (int)
+    //3 things it can do:
+    //   - set temperture
+    //   - start a cooking program
+    //   - show cooking time
 };
 
 /* 
@@ -570,7 +633,16 @@ Thing 8) Lid
 */
 struct Lid
 {
-
+    //5 properties:
+    //   - circumference in cm (int)
+    //   - thickness of sealing ring in mm (float)
+    //   - number of lid fins (int)
+    //   - height of lid handle in cm (int)
+    //   - number of holes in exhaust valve (int)
+    //3 things it can do:
+    //   - seal Instant Pot
+    //   - release steam
+    //   - twist on and off Instant Pot
 };
 
 /* 
@@ -588,7 +660,16 @@ Thing 9) Trivet
 */
 struct Trivet
 {
-
+    //5 properties:
+    //   - height of feet in mm (double)
+    //   - length of arms in cm (int)
+    //   - length between grills cm (double)
+    //   - number of grills longitudinal (int)
+    //   - number of grills lateral (int)
+    //3 things it can do:
+    //   - hold external steaming rack
+    //   - lift food out
+    //   - fold together
 };
 
 /* 
@@ -606,7 +687,16 @@ Thing 10) Instant Pot
 */
 struct InstantPot
 {
-
+    //5 properties:
+    //   - Inner Pot
+    //   - Outer Pot
+    //   - Control Panel
+    //   - Lid
+    //   - Trivet
+    //3 things it can do:
+    //   - make yoghurt
+    //   - slow cook food
+    //   - pressure cook food
 };
 
 
