@@ -459,9 +459,9 @@ struct Train
     //take customer to destination
     void takeCustomerToDestination(bool isCustomerDestination);
     //check ticket
-    void checkTicket();
+    void checkTicket(bool customerBoughtTicket);
     //pickup customers at station
-    bool pickupCustomer(int amountCustomerAtStop); //returns how many customers if any will get on
+    bool pickupCustomer(int amountCustomerAtStop); //returns true if there is any customers to pick up
 };
 
 /* 
@@ -492,11 +492,11 @@ struct Restaurant
     double operatingHours = 9.5;
     //3 things it can do:
     //feed customer
-    void feedCustomer();
+    void feedCustomer(bool customerIsHungry, int numCustomerAtTable, bool foodOrderedAvailable);
     //serve customer
-    void serveCustomer();
+    void serveCustomer(bool customerOrderedFood);
     //reserve seats for customer
-    bool reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns how many customers are reserving and if the restaurant is full
+    bool reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns true is the amount of customers wanting to book can book
     
 };
 
@@ -541,9 +541,9 @@ struct Airport
     };
     //3 things it can do:
     //board customer on a plane
-    void boardCustomerOnPlane();
+    void boardCustomerOnPlane(CommercialPlane atGate);
     //move luggage
-    void moveLuggage();
+    void moveLuggage(bool conveyorBeltOn, double weightOfLuggage);
     //delay flight
     void delayFlight(double amountDelayed);
 };
@@ -589,11 +589,11 @@ struct Gym
     void lengthUsed(std::string trainingSplit = "pushPullLegs", bool trainingAlone = true);
     };
     //make customer loose weight
-    void makeCustomerLooseWeight();
+    void makeCustomerLooseWeight(BenchPress customer);
     //make customer build muscles
-    void makeCustomerBuildMuscles();
+    void makeCustomerBuildMuscles(BenchPress customer);
     //run exercis classes
-    void runExercisClasses (std::string typeOfClass);
+    void runExercisClasses (std::string typeOfClass, int lengthOfClass, int numCustomerSignedUpForClass);
 };
 
 /* 
@@ -624,11 +624,11 @@ struct InnerPot
     int volumeLiters = 6;
     //3 things it can do:
     //be taken out of outer pot
-    void TakenOutOfInnerPot();
+    void TakenOutOfInnerPot(int timeLeftBeforeFoodDone, bool lidOn);
     //hold food
-    void holdFood();
+    void holdFood(bool potEmpty);
     //show max volume of food able to be cooked at once
-    void showMaxVolumeFoodAbleToBeCookedAtOnce();
+    void showMaxVolumeFoodAbleToBeCookedAtOnce(bool potOverFilled);
 };
 
 /* 
@@ -659,11 +659,11 @@ struct OuterPot
     int numFeet = 4;
     //3 things it can do:
     //keep heat in
-    void keepHeat();
+    void keepHeat(bool keepWarmButtonOn);
     //get rid of excess condesation
-    void getRidExcessCondensation(bool condensationCollectorFull); //returns if able to get rid of the excess condensation
+    void getRidExcessCondensation(int amountOfExcessCondensation, bool condensationCollectorFull);
     //create pressure
-    void createPressure();
+    void createPressure(bool lidSealed, bool valveClosed, InnerPot amountLiquid, int temperture);
 };
 
 /* 
@@ -694,9 +694,9 @@ struct ControlPanel
     int numSettings = 23;
     //3 things it can do:
     //set temperture
-    void setTemperture();
+    void setTemperture(bool highClicked, bool mediumClicked, bool lowClicked);
     //start a cooking program
-    void startCookingProgram();
+    void startCookingProgram(std::string cookingProgram, bool electricityConnected);
     //show cooking time
     float showCookingTime(float cookingTimePassed); //returns how long is left when you check it
 };
@@ -729,11 +729,11 @@ struct Lid
     int numholesExhaustValve = 3;
     //3 things it can do:
     //seal Instant Pot
-    void sealInstantPot();
+    void sealInstantPot(bool lockEnganged, bool steamValveClosed);
     //release steam
     void releaseSteam(bool steamValveOpen);
     //twist on Instant Pot
-    void twistOnInstanPot();
+    void twistOnInstanPot(bool noBlockage);
 };
 
 /* 
@@ -764,11 +764,11 @@ struct Trivet
     int numGrillsLateral = 4;
     //3 things it can do:
     //hold external steaming rack
-    void holdExternalSteamingRack();
+    void holdExternalSteamingRack(bool amrsInPlace);
     //lift food out
-    void liftFoodOut();
+    void liftFoodOut(int numFoodItems, int weightOfFoodItems, int sizeOfFoodItems);
     //fold together
-    void foldTogether();
+    void foldTogether(bool beenWashed);
 };
 
 /* 
@@ -794,11 +794,11 @@ struct InstantPot
     //   - Trivet
     //3 things it can do:
     //make yoghurt
-    void makeYoghurt();
+    void makeYoghurt(int amountYoghurt);
     //slow cook food
-    void slowCookFood();
+    void slowCookFood(int timeUntilDinner);
     //pressure cook food
-    void pressureCookFood();
+    void pressureCookFood(InnerPot filledToMin);
 };
 
 
