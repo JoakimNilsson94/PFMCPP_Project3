@@ -960,9 +960,9 @@ struct Airport
         std::string model = "747";
         int numSeats = 416;
 
-        void flightCheck(float milesTraveled, int yearsOld, bool warningLightOn);
-        void restockInventory(int lenghtOfNextFlight, int stockLevelInPlane);
-        void flightOnTime(bool allPassangersAtGate, double timeArrived, double timeForDeparture);
+        void checkFlight(float milesTraveled, int yearsOld, bool warningLightOn);
+        void refillInventory(int lenghtOfNextFlight, int stockLevelInPlane);
+        void leaveOnTime(bool allPassangersAtGate, double timeArrived, double timeForDeparture);
     };
 
     //3 things it can do:    
@@ -998,9 +998,9 @@ struct Gym
         bool spotterInPlace = false;
         std::string person = "bodyBuilder";
 
-        void amountReps(float weightOfPerson = 90, bool firstExercis = true);
-        void injury(std::string injuryArea, bool rippedMusle = false);
-        void lengthUsed(std::string trainingSplit = "pushPullLegs", bool trainingAlone = true);
+        void performRepetitions(float weightOfPerson = 90, bool firstExercis = true);
+        void getInjured(std::string injuryArea, bool rippedMusle = false);
+        void dropBar(int experienceLevel = 8, int gripStrength = 10, bool areTired = false);
     };
 
     //3 things it can do:
@@ -1029,7 +1029,7 @@ struct InnerPot
 
     //3 things it can do:
     //be taken out of outer pot
-    void TakenOutOfInnerPot(int timeLeftBeforeFoodDone, bool lidOn);
+    void takenOutOfInnerPot(int timeLeftBeforeFoodDone, bool lidOn);
 
     //hold food
     void holdFood(bool potEmpty);
