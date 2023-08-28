@@ -434,7 +434,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
 5 properties:
     1) number of train cars (int)
     2) number of seats (int)
-    3) the amount of electrcity used (float)
+    3) the amount of electrcity used per week (float)
     4) number of miles traveled per day (double)
     5) ticket price (double)
 3 things it can do:
@@ -445,11 +445,16 @@ MOVE THEM to the space below this block comment and put them in numerical order
 struct Train
 {
     //5 properties:
-    //   - number of train cars (int)
-    //   - number of seats (int)
-    //   - the amount of electrcity used (float)
-    //   - number of miles traveled per day (double)
-    //   - ticket price (double)
+    //number of train cars (int)
+    int numTrainCars = 5;
+    //number of seats (int)
+    int numSeats = 100;
+    //the amount of electrcity used per week (float)
+    float electricityUsedPerWeek = 28000.f;
+    //number of miles traveled per day (double)
+    double numMilesTravelPerDay = 268.6;
+    //ticket price (double)
+    double ticketPrice = 12;
     //3 things it can do:
     //   - take customer to destination
     //   - check ticket
@@ -472,11 +477,16 @@ Thing 2) Restaurant
 struct Restaurant 
 {
     //5 properties:
-    //   - number of food items (int)
-    //   - number of plates (int)
-    //   - number of chairs (int)
-    //   - number of tables (int)
-    //   - operating hours (double)
+    //number of food items (int)
+    int numFoodItems = 15;
+    //number of plates (int)
+    int numPlates = 200;
+    //number of chairs (int)
+    int numChairs = 50;
+    //number of tables (int)
+    int numTables = 15;
+    //operating hours (double)
+    double operatingHours = 9.5;
     //3 things it can do:
     //   - feed customer
     //   - serve customer
@@ -487,9 +497,9 @@ struct Restaurant
 Thing 3) Airport
 5 properties:
     1) number of planes (int)
-    2) size of tarmac (int)
+    2) enght of runway in m (int)
     3) number of gates (int)
-    4) length of security line (int)
+    4) secirity line wait time (int)
     5) number of private jets (int)
 3 things it can do:
     1) board customer on a plane
@@ -499,11 +509,16 @@ Thing 3) Airport
 struct Airport
 {
     //5 properties:
-    //   - number of planes (int)
-    //   - size of tarmac (int)
-    //   - number of gates (int)
-    //   - length of security line (int)
-    //   - number of private jets (int)
+    //number of planes (int)
+    int numPlanes = 30;
+    //lenght of runway in m (int)
+    int lengthRunwayM = 2800;
+    //number of gates (int)
+    int numGates = 20;
+    //secirity line wait time (int)
+    int securityLineWaitTime = 22;
+    //number of private jets (int)
+    int numPrivateJets = 2;
     //3 things it can do:
     //   - board customer on a plane
     //   - move luggage
@@ -516,7 +531,7 @@ Thing 4) Gym
     1) number of staff (int)
     2) number of weights (int)
     3) number of lockers (int)
-    4) amount of staff (int)
+    4) amount of cardio machines (int)
     5) type of equipment (std::string)
 3 things it can do:
     1) make customer loose weight
@@ -526,11 +541,16 @@ Thing 4) Gym
 struct Gym 
 {
     //5 properties:
-    //   - number of staff (int)
-    //   - number of weights (int)
-    //   - number of lockers (int)
-    //   - amount of staff (int)
-    //   - type of equipment (std::string)
+    //number of staff (int)
+    int numStaff = 8;
+    //number of weights (int)
+    int numWeights = 120;
+    //number of lockers (int)
+    int numLockers = 60;
+    //amount of cardio machines (int)
+    int numCardioMachines = 10;
+    //brand of equipment (std::string)
+    std::string brandEquipment = "Technogym";
     //3 things it can do:
     //   - make customer loose weight
     //   - make customer build muscles
@@ -540,10 +560,10 @@ struct Gym
 /* 
 Thing 5) Inner Pot
 5 properties:
-    1) height in cm (int)
-    2) width in cm (int)
-    3) circumference in cm (int)
-    4) thickness in cm (int)
+    1) height in cm (double)
+    2) width in cm (double)
+    3) circumference in cm (double)
+    4) thickness in mm (int)
     5) volume in liters (int)
 3 things it can do:
     1) be taken out of outer pot
@@ -553,11 +573,16 @@ Thing 5) Inner Pot
 struct InnerPot
 {
     //5 properties:
-    //   - height in cm (int)
-    //   - width in cm (int)
-    //   - circumference in cm (int)
-    //   - thickness in cm (int)
-    //   - volume in liters (int)
+    //height in cm (double)
+    double heightCm = 15.8;
+    //width in cm (double)
+    double widthCm = 23.8;
+    //circumference in cm (double)
+    double circumferenceCm = 74.8;
+    //thickness in mm (int)
+    int thicknessMm = 6;
+    //volume in liters (int)
+    int volumeLiters = 6;
     //3 things it can do:
     //   - be taken out of outer pot
     //   - hold food
@@ -580,11 +605,16 @@ Thing 6) Outer Pot
 struct OuterPot
 {
     //5 properties:
-    //   - volume of condensation collector in ml (float)
-    //   - amount of heat produced in celsius (double)
-    //   - amount of power consumed (float)
-    //   - number of handles (int)
-    //   - number of feet (int)
+    //volume of condensation collector in ml (float)
+    float volumeCondensationCollectorMl = 50.f;
+    //amount of heat produced in celsius (double)
+    double amountHeatCelsius = 118;
+    //amount of power consumed (float)
+    float amountPowerConumed = 4.f;
+    //number of handles (int)
+    int numHandles = 2;
+    //number of feet (int)
+    int numFeet = 4;
     //3 things it can do:
     //   - keep heat in
     //   - get rid of excess condesation
@@ -598,7 +628,7 @@ Thing 7) Control Panel
     2) number of display pixels (int)
     3) brightness of display (double)
     4) number of lights (int)
-    5) amount of settings (int)
+    5) number of settings (int)
 3 things it can do:
     1) set temperture
     2) start a cooking program
@@ -607,11 +637,16 @@ Thing 7) Control Panel
 struct ControlPanel
 {
     //5 properties:
-    //   - number of buttons (int)
-    //   - number of display pixels (int)
-    //   - brightness of display (double)
-    //   - number of lights (int)
-    //   - amount of settings (int)
+    //number of buttons (int)
+    int numButtons = 18;
+    //number of display pixels (int)
+    int numDisplyPixels = 120; 
+    //brightness of display (double)
+    double brighnessDisplay = 100;
+    //number of lights (int)
+    int numLights = 19;
+    //number of settings (int)
+    int numSettings = 23;
     //3 things it can do:
     //   - set temperture
     //   - start a cooking program
@@ -634,11 +669,16 @@ Thing 8) Lid
 struct Lid
 {
     //5 properties:
-    //   - circumference in cm (int)
-    //   - thickness of sealing ring in mm (float)
-    //   - number of lid fins (int)
-    //   - height of lid handle in cm (int)
-    //   - number of holes in exhaust valve (int)
+    //circumference in cm (int)
+    int circumferenceCm = 80;
+    //thickness of sealing ring in mm (float)
+    float thicknessSealingRingMm = 5.25f;
+    //number of lid fins (int)
+    int numLidFins = 2;
+    //height of lid handle in cm (int)
+    int heightLidHandleCm = 2;
+    //number of holes in exhaust valve (int)
+    int numholesExhaustValve = 3;
     //3 things it can do:
     //   - seal Instant Pot
     //   - release steam
@@ -648,8 +688,8 @@ struct Lid
 /* 
 Thing 9) Trivet
 5 properties:
-    1) height of feet in mm (double)
-    2) length of arms in cm (int)
+    1) height of feet in cm (double)
+    2) length of arms in cm (double)
     3) length between grills cm (double)
     4) number of grills longitudinal (int)
     5) number of grills lateral (int)
@@ -661,11 +701,16 @@ Thing 9) Trivet
 struct Trivet
 {
     //5 properties:
-    //   - height of feet in mm (double)
-    //   - length of arms in cm (int)
-    //   - length between grills cm (double)
-    //   - number of grills longitudinal (int)
-    //   - number of grills lateral (int)
+    //height of feet in cm (double)
+    double heightFeetCm = 1.4;
+    //length of arms in cm (double)
+    double lengthArmsCm = 10.5;
+    //length between grills cm (double)
+    double lengthBetweenGrillsCm = 3;
+    //number of grills longitudinal (int)
+    int numgrillsLongitudinal = 1;
+    //number of grills lateral (int)
+    int numGrillsLateral = 4;
     //3 things it can do:
     //   - hold external steaming rack
     //   - lift food out
