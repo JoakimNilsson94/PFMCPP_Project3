@@ -431,273 +431,6 @@ MOVE THEM to the space below this block comment and put them in numerical order
     simply CUT and PASTE them in the space provided below:
 */
 
-struct Train
-{
-    //number of train cars
-    int numTrainCars = 5;
-    //number of seats
-    int numSeats = 100;
-    //the amount of electrcity used per week
-    float electricityUsedPerWeek = 28000.f; 
-    //number of miles traveled per day
-    double numMilesTravelPerDay = 268.6;
-    //ticket price
-    double ticketPrice = 12;
-
-    //3 things it can do:
-    //take customer to destination
-    void takeCustomerToDestination(bool isCustomerDestination);
-
-    //check ticket
-    void checkTicket(bool customerBoughtTicket);
-
-    //pickup customers at station
-    bool pickupCustomer(int amountCustomerAtStop); //returns true if there is any customers to pick up
-};
-
-struct Restaurant 
-{
-    //number of food items
-    int numFoodItems = 15;
-    //number of plates
-    int numPlates = 200;
-    //number of chairs
-    int numChairs = 50;
-    //number of tables
-    int numTables = 15;
-    //operating hours
-    double operatingHours = 9.5;
-
-    //3 things it can do:
-    //feed customer
-    void feedCustomer(bool customerIsHungry, int numCustomerAtTable, bool foodOrderedAvailable);
-
-    //serve customer
-    void serveCustomer(bool customerOrderedFood);
-
-    //reserve seats for customer
-    bool reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns true is the amount of customers wanting to book can book
-};
-
-struct Airport
-{
-    //number of planes
-    int numPlanes = 30;
-    //lenght of runway in m
-    int lengthRunwayM = 2800;
-    //number of gates
-    int numGates = 20;
-    //secirity line wait time
-    int securityLineWaitTime = 22;
-    //number of private jets
-    int numPrivateJets = 2;
-    
-    struct CommercialPlane
-    {
-        bool isAPrivateJet = false;
-        int numEngines = 4;
-        std::string manufacturer = "Boeing";
-        std::string model = "747";
-        int numSeats = 416;
-
-        void flightCheck(float milesTraveled, int yearsOld, bool warningLightOn);
-        void restockInventory(int lenghtOfNextFlight, int stockLevelInPlane);
-        void flightOnTime(bool allPassangersAtGate, double timeArrived, double timeForDeparture);
-    };
-
-    //3 things it can do:    
-    //board customer on a plane
-    void boardCustomerOnPlane(CommercialPlane atGate);
-
-    //move luggage
-    void moveLuggage(bool conveyorBeltOn, double weightOfLuggage);
-
-    //delay flight
-    void delayFlight(double amountDelayed);
-};
-
-struct Gym 
-{
-    //number of staff
-    int numStaff = 8;
-    //number of weights
-    int numWeights = 120;
-    //number of lockers
-    int numLockers = 60;
-    //amount of cardio machines
-    int numCardioMachines = 10;
-    //brand of equipment
-    std::string brandEquipment = "Technogym";
-    //3 things it can do:
-   
-    struct BenchPress 
-    {
-        int weightBar = 20;
-        int weightPutOn = 120;
-        bool weightLocksUsed = false;
-        bool spotterInPlace = false;
-        std::string person = "bodyBuilder";
-
-        void amountReps(float weightOfPerson = 90, bool firstExercis = true);
-        void injury(std::string injuryArea, bool rippedMusle = false);
-        void lengthUsed(std::string trainingSplit = "pushPullLegs", bool trainingAlone = true);
-    };
-
-    //3 things it can do:
-    //make customer loose weight
-    void makeCustomerLooseWeight(BenchPress customer);
-
-    //make customer build muscles
-    void makeCustomerBuildMuscles(BenchPress customer);
-
-    //run exercis classes
-    void runExercisClasses (std::string typeOfClass, int lengthOfClass, int numCustomerSignedUpForClass);
-};
-
-struct InnerPot
-{
-    //height in cm
-    double heightCm = 15.8;
-    //width in cm
-    double widthCm = 23.8;
-    //circumference in cm
-    double circumferenceCm = 74.8;
-    //thickness in mm
-    int thicknessMm = 6;
-    //volume in liters
-    int volumeLiters = 6;
-
-    //3 things it can do:
-    //be taken out of outer pot
-    void TakenOutOfInnerPot(int timeLeftBeforeFoodDone, bool lidOn);
-
-    //hold food
-    void holdFood(bool potEmpty);
-
-    //show max volume of food able to be cooked at once
-    void showMaxVolumeFoodAbleToBeCookedAtOnce(bool potOverFilled);
-};
-
-struct OuterPot
-{
-    //volume of condensation collector in ml
-    float volumeCondensationCollectorMl = 50.f;
-    //amount of heat produced in celsius
-    double amountHeatCelsius = 118;
-    //amount of power consumed
-    float amountPowerConumed = 4.f;
-    //number of handles
-    int numHandles = 2;
-    //number of feet
-    int numFeet = 4;
-
-    //3 things it can do:
-    //keep heat in
-    void keepHeat(bool keepWarmButtonOn);
-
-    //get rid of excess condesation
-    void getRidExcessCondensation(int amountOfExcessCondensation, bool condensationCollectorFull);
-
-    //create pressure
-    void createPressure(bool lidSealed, bool valveClosed, InnerPot amountLiquid, int temperture);
-};
-
-struct ControlPanel
-{
-    //number of buttons
-    int numButtons = 18;
-    //number of display pixels
-    int numDisplyPixels = 120;
-    //brightness of display
-    double brighnessDisplay = 100;
-    //number of lights
-    int numLights = 19;
-    //number of settings
-    int numSettings = 23;
-
-    //3 things it can do:
-    //set temperture
-    void setTemperture(bool highClicked, bool mediumClicked, bool lowClicked);
-
-    //start a cooking program
-    void startCookingProgram(std::string cookingProgram, bool electricityConnected);
-
-    //show cooking time
-    float showCookingTime(float cookingTimePassed); //returns how long is left when you check it
-};
-
-struct Lid
-{
-    //circumference in cm
-    int circumferenceCm = 80;
-    //thickness of sealing ring in mm
-    float thicknessSealingRingMm = 5.25f;
-    //number of lid fins
-    int numLidFins = 2;
-    //height of lid handle in cm
-    int heightLidHandleCm = 2;
-    //number of holes in exhaust valve
-    int numholesExhaustValve = 3;
-
-    //3 things it can do:
-    //seal Instant Pot
-    void sealInstantPot(bool lockEnganged, bool steamValveClosed);
-
-    //release steam
-    void releaseSteam(bool steamValveOpen);
-
-    //twist on Instant Pot
-    void twistOnInstanPot(bool noBlockage);
-};
-
-struct Trivet
-{
-    
-    //height of feet in cm
-    double heightFeetCm = 1.4;
-    //length of arms in cm
-    double lengthArmsCm = 10.5;
-    //length between grills cm
-    double lengthBetweenGrillsCm = 3;
-    //number of grills longitudinal
-    int numgrillsLongitudinal = 1;
-    //number of grills latera
-    int numGrillsLateral = 4;
-
-    //3 things it can do:
-    //hold external steaming rack
-    void holdExternalSteamingRack(bool amrsInPlace);
-
-    //lift food out
-    void liftFoodOut(int numFoodItems, int weightOfFoodItems, int sizeOfFoodItems);
-
-    //fold together
-    void foldTogether(bool beenWashed);
-};
-
-struct InstantPot
-{
-    //Inner Pot
-    InnerPot innerPot;
-    //Outer Pot
-    OuterPot outerPot;
-    //Control Panel
-    ControlPanel controlPanel;
-    //Lid
-    Lid lid;
-    //Trivet
-    Trivet trivet;
-
-    //3 things it can do:
-    //make yoghurt
-    void makeYoghurt(int amountYoghurt);
-
-    //slow cook food
-    void slowCookFood(int timeUntilDinner);
-
-    //pressure cook food
-    void pressureCookFood(InnerPot filledToMin);
-};
 
 
 /*
@@ -1158,6 +891,273 @@ Part 1e - Step 19: Request a review
 paste your code below
 */
 
+struct Train
+{
+    //number of train cars
+    int numTrainCars = 5;
+    //number of seats
+    int numSeats = 100;
+    //the amount of electrcity used per week
+    float electricityUsedPerWeek = 28000.f; 
+    //number of miles traveled per day
+    double numMilesTravelPerDay = 268.6;
+    //ticket price
+    double ticketPrice = 12;
+
+    //3 things it can do:
+    //take customer to destination
+    void takeCustomerToDestination(bool isCustomerDestination);
+
+    //check ticket
+    void checkTicket(bool customerBoughtTicket);
+
+    //pickup customers at station
+    bool pickupCustomer(int amountCustomerAtStop); //returns true if there is any customers to pick up
+};
+
+struct Restaurant 
+{
+    //number of food items
+    int numFoodItems = 15;
+    //number of plates
+    int numPlates = 200;
+    //number of chairs
+    int numChairs = 50;
+    //number of tables
+    int numTables = 15;
+    //operating hours
+    double operatingHours = 9.5;
+
+    //3 things it can do:
+    //feed customer
+    void feedCustomer(bool customerIsHungry, int numCustomerAtTable, bool foodOrderedAvailable);
+
+    //serve customer
+    void serveCustomer(bool customerOrderedFood);
+
+    //reserve seats for customer
+    bool reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns true is the amount of customers wanting to book can book
+};
+
+struct Airport
+{
+    //number of planes
+    int numPlanes = 30;
+    //lenght of runway in m
+    int lengthRunwayM = 2800;
+    //number of gates
+    int numGates = 20;
+    //secirity line wait time
+    int securityLineWaitTime = 22;
+    //number of private jets
+    int numPrivateJets = 2;
+    
+    struct CommercialPlane
+    {
+        bool isAPrivateJet = false;
+        int numEngines = 4;
+        std::string manufacturer = "Boeing";
+        std::string model = "747";
+        int numSeats = 416;
+
+        void flightCheck(float milesTraveled, int yearsOld, bool warningLightOn);
+        void restockInventory(int lenghtOfNextFlight, int stockLevelInPlane);
+        void flightOnTime(bool allPassangersAtGate, double timeArrived, double timeForDeparture);
+    };
+
+    //3 things it can do:    
+    //board customer on a plane
+    void boardCustomerOnPlane(CommercialPlane atGate);
+
+    //move luggage
+    void moveLuggage(bool conveyorBeltOn, double weightOfLuggage);
+
+    //delay flight
+    void delayFlight(double amountDelayed);
+};
+
+struct Gym 
+{
+    //number of staff
+    int numStaff = 8;
+    //number of weights
+    int numWeights = 120;
+    //number of lockers
+    int numLockers = 60;
+    //amount of cardio machines
+    int numCardioMachines = 10;
+    //brand of equipment
+    std::string brandEquipment = "Technogym";
+    //3 things it can do:
+   
+    struct BenchPress 
+    {
+        int weightBar = 20;
+        int weightPutOn = 120;
+        bool weightLocksUsed = false;
+        bool spotterInPlace = false;
+        std::string person = "bodyBuilder";
+
+        void amountReps(float weightOfPerson = 90, bool firstExercis = true);
+        void injury(std::string injuryArea, bool rippedMusle = false);
+        void lengthUsed(std::string trainingSplit = "pushPullLegs", bool trainingAlone = true);
+    };
+
+    //3 things it can do:
+    //make customer loose weight
+    void makeCustomerLooseWeight(BenchPress customer);
+
+    //make customer build muscles
+    void makeCustomerBuildMuscles(BenchPress customer);
+
+    //run exercis classes
+    void runExercisClasses (std::string typeOfClass, int lengthOfClass, int numCustomerSignedUpForClass);
+};
+
+struct InnerPot
+{
+    //height in cm
+    double heightCm = 15.8;
+    //width in cm
+    double widthCm = 23.8;
+    //circumference in cm
+    double circumferenceCm = 74.8;
+    //thickness in mm
+    int thicknessMm = 6;
+    //volume in liters
+    int volumeLiters = 6;
+
+    //3 things it can do:
+    //be taken out of outer pot
+    void TakenOutOfInnerPot(int timeLeftBeforeFoodDone, bool lidOn);
+
+    //hold food
+    void holdFood(bool potEmpty);
+
+    //show max volume of food able to be cooked at once
+    void showMaxVolumeFoodAbleToBeCookedAtOnce(bool potOverFilled);
+};
+
+struct OuterPot
+{
+    //volume of condensation collector in ml
+    float volumeCondensationCollectorMl = 50.f;
+    //amount of heat produced in celsius
+    double amountHeatCelsius = 118;
+    //amount of power consumed
+    float amountPowerConumed = 4.f;
+    //number of handles
+    int numHandles = 2;
+    //number of feet
+    int numFeet = 4;
+
+    //3 things it can do:
+    //keep heat in
+    void keepHeat(bool keepWarmButtonOn);
+
+    //get rid of excess condesation
+    void getRidExcessCondensation(int amountOfExcessCondensation, bool condensationCollectorFull);
+
+    //create pressure
+    void createPressure(bool lidSealed, bool valveClosed, InnerPot amountLiquid, int temperture);
+};
+
+struct ControlPanel
+{
+    //number of buttons
+    int numButtons = 18;
+    //number of display pixels
+    int numDisplyPixels = 120;
+    //brightness of display
+    double brighnessDisplay = 100;
+    //number of lights
+    int numLights = 19;
+    //number of settings
+    int numSettings = 23;
+
+    //3 things it can do:
+    //set temperture
+    void setTemperture(bool highClicked, bool mediumClicked, bool lowClicked);
+
+    //start a cooking program
+    void startCookingProgram(std::string cookingProgram, bool electricityConnected);
+
+    //show cooking time
+    float showCookingTime(float cookingTimePassed); //returns how long is left when you check it
+};
+
+struct Lid
+{
+    //circumference in cm
+    int circumferenceCm = 80;
+    //thickness of sealing ring in mm
+    float thicknessSealingRingMm = 5.25f;
+    //number of lid fins
+    int numLidFins = 2;
+    //height of lid handle in cm
+    int heightLidHandleCm = 2;
+    //number of holes in exhaust valve
+    int numholesExhaustValve = 3;
+
+    //3 things it can do:
+    //seal Instant Pot
+    void sealInstantPot(bool lockEnganged, bool steamValveClosed);
+
+    //release steam
+    void releaseSteam(bool steamValveOpen);
+
+    //twist on Instant Pot
+    void twistOnInstanPot(bool noBlockage);
+};
+
+struct Trivet
+{
+    
+    //height of feet in cm
+    double heightFeetCm = 1.4;
+    //length of arms in cm
+    double lengthArmsCm = 10.5;
+    //length between grills cm
+    double lengthBetweenGrillsCm = 3;
+    //number of grills longitudinal
+    int numgrillsLongitudinal = 1;
+    //number of grills latera
+    int numGrillsLateral = 4;
+
+    //3 things it can do:
+    //hold external steaming rack
+    void holdExternalSteamingRack(bool amrsInPlace);
+
+    //lift food out
+    void liftFoodOut(int numFoodItems, int weightOfFoodItems, int sizeOfFoodItems);
+
+    //fold together
+    void foldTogether(bool beenWashed);
+};
+
+struct InstantPot
+{
+    //Inner Pot
+    InnerPot innerPot;
+    //Outer Pot
+    OuterPot outerPot;
+    //Control Panel
+    ControlPanel controlPanel;
+    //Lid
+    Lid lid;
+    //Trivet
+    Trivet trivet;
+
+    //3 things it can do:
+    //make yoghurt
+    void makeYoghurt(int amountYoghurt);
+
+    //slow cook food
+    void slowCookFood(int timeUntilDinner);
+
+    //pressure cook food
+    void pressureCookFood(InnerPot filledToMin);
+};
 
 
 
