@@ -457,11 +457,11 @@ struct Train
     double ticketPrice = 12;
     //3 things it can do:
     //take customer to destination
-    void takeCustomerToDestination(bool isCustomerDestination);//returns if the stop is the customer destination or not
+    void takeCustomerToDestination(bool isCustomerDestination);
     //check ticket
     void checkTicket();
     //pickup customers at station
-    void pickupCustomer(int amountCustomerAtStop); //returns how many customers are getting on
+    bool pickupCustomer(int amountCustomerAtStop); //returns how many customers if any will get on
 };
 
 /* 
@@ -496,7 +496,7 @@ struct Restaurant
     //serve customer
     void serveCustomer();
     //reserve seats for customer
-    void reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns how many customers are reserving and if the restaurant is full
+    bool reserveSeatsCustomer(int numCustomer, bool fullyBooked); //returns how many customers are reserving and if the restaurant is full
     
 };
 
@@ -526,13 +526,26 @@ struct Airport
     int securityLineWaitTime = 22;
     //number of private jets (int)
     int numPrivateJets = 2;
+    
+    struct CommercialPlane
+    {
+    bool isAPrivateJet = false;
+    int numEngines = 4;
+    std::string manufacturer = "Boeing";
+    std::string model = "747";
+    int numSeats = 416;
+
+    void flightCheck(float milesTraveled, int yearsOld, bool warningLightOn);
+    void restockInventory(int lenghtOfNextFlight, int stockLevelInPlane);
+    void flightOnTime(bool allPassangersAtGate, double timeArrived, double timeForDeparture);
+    };
     //3 things it can do:
     //board customer on a plane
     void boardCustomerOnPlane();
     //move luggage
     void moveLuggage();
     //delay flight
-    void delayFlight(double amountDelayed); //returns how long the delay is
+    void delayFlight(double amountDelayed);
 };
 
 /* 
@@ -562,12 +575,25 @@ struct Gym
     //brand of equipment (std::string)
     std::string brandEquipment = "Technogym";
     //3 things it can do:
+
+    struct BenchPress 
+    {
+    int weightBar = 20;
+    int weightPutOn = 120;
+    bool weightLocksUsed = false;
+    bool spotterInPlace = false;
+    std::string person = "bodyBuilder";
+
+    void amountReps(float weightOfPerson = 90, bool firstExercis = true);
+    void injury(std::string injuryArea, bool rippedMusle = false);
+    void lengthUsed(std::string trainingSplit = "pushPullLegs", bool trainingAlone = true);
+    };
     //make customer loose weight
     void makeCustomerLooseWeight();
     //make customer build muscles
     void makeCustomerBuildMuscles();
     //run exercis classes
-    void runExercisClasses (std::string typeOfClass); //returns what type of class will run
+    void runExercisClasses (std::string typeOfClass);
 };
 
 /* 
@@ -705,7 +731,7 @@ struct Lid
     //seal Instant Pot
     void sealInstantPot();
     //release steam
-    void releaseSteam(bool steamValveOpen); //return if it can release steam
+    void releaseSteam(bool steamValveOpen);
     //twist on Instant Pot
     void twistOnInstanPot();
 };
