@@ -430,7 +430,7 @@ MOVE THEM to the space below this block comment and put them in numerical order
     I only want to see the 10 UDTs written BELOW this block comment, in numerical order (1 - 10).
     simply CUT and PASTE them in the space provided below:
 */
-Thing 1) Train
+/* Thing 1) Train
 5 properties:
     1) number of train cars (int)
     2) number of seats (int)
@@ -441,7 +441,13 @@ Thing 1) Train
     1) take customer to destination
     2) check ticket
     3) pickup customer at station
+*/
+struct Train
+{
+    
+};
 
+/* 
 Thing 2) Restaurant
 5 properties:
     1) number of food items (int)
@@ -453,7 +459,13 @@ Thing 2) Restaurant
     1) feed customer
     2) serve customer
     3) reserve seats for customer
+*/
+struct Restaurant 
+{
 
+};
+
+/* 
 Thing 3) Airport
 5 properties:
     1) number of planes (int)
@@ -465,7 +477,13 @@ Thing 3) Airport
     1) board customer on a plane
     2) move luggage
     3) delay flight
+*/
+struct Airport
+{
 
+};
+
+/* 
 Thing 4) Gym
 5 properties:
     1) number of staff (int)
@@ -477,7 +495,13 @@ Thing 4) Gym
     1) make customer loose weight
     2) make customer build muscles
     3) run exercis classes
+*/
+struct Gym 
+{
 
+};
+
+/* 
 Thing 5) Inner Pot
 5 properties:
     1) height in cm (int)
@@ -489,7 +513,13 @@ Thing 5) Inner Pot
     1) be taken out of outer pot
     2) hold food
     3) show max volume of food able to be cooked at once
+*/
+struct InnerPot
+{
 
+};
+
+/* 
 Thing 6) Outer Pot
 5 properties:
     1) volume of condensation collector in ml (float)
@@ -501,7 +531,13 @@ Thing 6) Outer Pot
     1) keep heat in
     2) get rid of excess condesation
     3) create and hold pressure
+*/
+struct OuterPot
+{
 
+};
+
+/* 
 Thing 7) Control Panel
 5 properties:
     1) number of buttons (int)
@@ -513,7 +549,13 @@ Thing 7) Control Panel
     1) set temperture
     2) start a cooking program
     3) show cooking time
+*/
+struct ControlPanel
+{
 
+};
+
+/* 
 Thing 8) Lid
 5 properties:
     1) circumference in cm (int)
@@ -525,19 +567,31 @@ Thing 8) Lid
     1) seal Instant Pot
     2) release steam
     3) twist on and off Instant Pot
+*/
+struct Lid
+{
 
+};
+
+/* 
 Thing 9) Trivet
 5 properties:
     1) height of feet in mm (double)
-    2) lenght of arms in cm (int)
-    3) lenght between grills cm (double)
+    2) length of arms in cm (int)
+    3) length between grills cm (double)
     4) number of grills longitudinal (int)
     5) number of grills lateral (int)
 3 things it can do:
     1) hold external steaming rack
     2) lift food out
     3) fold together
+*/
+struct Trivet
+{
 
+};
+
+/* 
 Thing 10) Instant Pot
 5 properties:
     1) Inner Pot
@@ -549,8 +603,11 @@ Thing 10) Instant Pot
     1) make yoghurt
     2) slow cook food
     3) pressure cook food
+*/
+struct InstantPot
+{
 
-
+};
 
 
 /*
